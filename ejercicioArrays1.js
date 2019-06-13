@@ -1,4 +1,4 @@
-'use strict'
+ 'use strict'
 var arreglo = [];
 var i =0;
 // recibir valores

@@ -6,6 +6,8 @@ function cambiaColor(color) {
 //query selector
 var query = document.querySelector('.divcentral');
 var caja = document.getElementById('lista1');
+var boton = document.querySelector('#boton');
+boton
 // caja.innerHTML = 'te cambie puto';
 // caja.style.background= 'black';
 console.log(caja);
@@ -25,6 +27,12 @@ for (var valor in divs) {
     }
 
 }
+//append o prepend
+var cambiar = document.getElementsByClassName('divcentral1');
 
-// divs[2].innerHTML = 'chupelo';
-// console.log(contenido);
+for (var div in cambiar) {
+    if(cambiar[div].className == "divcentral1" ){
+        cambiar[div].style.background = "red" ;
+
+    }
+}

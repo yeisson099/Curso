@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="ejercicioForm.js"></script>
+    <title>Document</title>
+    <style>
+        .div{
+            width: 180px;
+            height: 400px;
+            float: left;
+            margin: 20px;
+            padding: 20px;
+            background-color: brown;
+        }
+        .mostrar{
+            border: 3px dashed red;
+            background-color: yellow;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>EJERCICIO FORMULARIO</h1>
+    <div class="div">
+
+        <form action="" method="POST" id="form" onsubmit="return false">
+            <h2>Nombre</h2>
+            <input type="text" name="nombre" placeholder=" " id="nombre">
+                <span class="error_n"></span>
+            <p></p>
+            <h2>Apellido</h2>
+            <input type="text" name="apellido" id="apellido">
+                <span class="error_a"></span>
+            <p></p>
+            <h2>Edad</h2>
+            <input type="text" name="edad" id="edad">
+                <span class="error_e"></span>
+            <p></p>
+            <button id="subir">Submit</button>
+
+        </form>
+
+    </div>
+    <div class="div mostrar">
+        <h2>datos capturados</h2>
+    </div>
+</body>
+</html>
