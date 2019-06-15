@@ -55,4 +55,8 @@ input2.addEventListener('keypress',(event)=>{
  var query = document.querySelector('.divcentral');
 
 
+
+
+
+ 
 })
