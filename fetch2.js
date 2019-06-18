@@ -27,8 +27,38 @@ getusuarios()
     .then(usuario => {
         console.log(usuario)
         mostrarUsuario(usuario.data);
-    });
+        return getInfo();
+    })
+    .then(data =>{
+        console.log(data);
+    })
+    //capturar error promesas
+    .catch(error =>{
+        console.log(error);
+        
+    })
+function getInfo(){
 
+    var profesor = {
+        nombre: 'victor',
+        apellido: 'robles',
+        url:'www.google.com'
+    }
+    return new Promise((resolve, reject)=>{
+       try {
+        profesor = JSON.stringify(profesor);
+        if(typeof profesor != 'string') return reject('fallo la promesa');
+        console.log(decodeURIComponent('http://anim%&![*eflv.net/'));
+        return resolve(profesor);
+
+       } catch (error) {
+           alert(error + ' la variable objeto valio verga')
+       }
+        
+     
+    });
+  
+}
 
 function mostrarDatos(usuarios) {
 
