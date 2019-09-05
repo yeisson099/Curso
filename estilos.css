@@ -66,6 +66,9 @@ table {
     font-weight:bold;
     font-size:13px;
 }
+.zebra{
+    border: 5px dashed dodgerblue;
+}
 .separador {
     color:gray;
 }
