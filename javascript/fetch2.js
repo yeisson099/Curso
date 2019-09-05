@@ -15,28 +15,6 @@ function getusuario() {
     return fetch('https://reqres.in/api/users/2')
 
 }
-getusuarios()
-    .then(data => data.json())
-    .then(users => {
-        console.log(usuarios);
-        mostrarDatos(users.data);
-
-        return getusuario();
-    })
-    .then(datos => datos.json())
-    .then(usuario => {
-        console.log(usuario)
-        mostrarUsuario(usuario.data);
-        return getInfo();
-    })
-    .then(data =>{
-        console.log(data);
-    })
-    //capturar error promesas
-    .catch(error =>{
-        console.log(error);
-        
-    })
 function getInfo(){
 
     var profesor = {
@@ -48,7 +26,7 @@ function getInfo(){
        try {
         profesor = JSON.stringify(profesor);
         if(typeof profesor != 'string') return reject('fallo la promesa');
-        console.log(decodeURIComponent('http://anim%&![*eflv.net/'));
+        console.log(decodeURIComponent('http%3A%2F%2Fanimeflv.net%2F'));
         return resolve(profesor);
 
        } catch (error) {
@@ -83,3 +61,25 @@ function mostrarUsuario(user) {
         div2.appendChild(img)
         span2.style.display = "none"
 }
+getusuarios()
+    .then(datos => datos.json())
+    .then(users => {
+        console.log(usuarios);
+        mostrarDatos(users.data);
+
+        return getusuario();
+    })
+    .then(datos => datos.json())
+    .then(usuario => {
+        console.log(usuario)
+        mostrarUsuario(usuario.data);
+        return getInfo();
+    })
+    .then(data =>{
+        console.log(data);
+    })
+    //capturar error promesas
+    .catch(error =>{
+        console.log(error);
+        
+    })

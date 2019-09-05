@@ -56,6 +56,10 @@ table {
     width: 100%;
     text-align: center;
 }
+.prueba{
+    margin-top: 50%;
+    background: blueviolet;
+}
 #miSection{
     width: 100%;
     background: black;
